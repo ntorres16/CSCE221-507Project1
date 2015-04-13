@@ -165,6 +165,22 @@ class Sort
 	{
 		display();	
 	}
+	
+	void insertion_sort(int* array, int size)
+	{
+	    int i,j,key;
+	    for (i=0;i<size;i++)
+	    {
+	        key=array[i];
+	        j=i-1;
+	        while (j>=0 && array[j]>key)
+	        {
+	            array[j+1]=array[j];
+	            j=j-1;
+	        }
+	        array[j+1]=key;
+	    }
+	}
 
 
 };
